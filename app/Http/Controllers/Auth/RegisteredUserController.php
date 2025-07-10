@@ -28,6 +28,7 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
+    // Menerima Request dan menyimpan ke database
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -41,6 +42,8 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        $user->assignRole('user');
 
         event(new Registered($user));
 
