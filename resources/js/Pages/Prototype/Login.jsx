@@ -1,6 +1,9 @@
 import React from "react";
 import InputLabel from "@/Components/InputLabel";
 import Input from "@/Components/Input";
+import Button from "@/Components/Button";
+import { Link } from "@inertiajs/react";
+
 
 function Login() {
     return (
@@ -47,6 +50,7 @@ function Login() {
                                     className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
                                     placeholder="Password" /> */}
                                 <Input
+                                    id="password"
                                     type="password" name="password"
                                     className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
                                     placeholder="Password"
@@ -54,16 +58,28 @@ function Login() {
                             </div>
                         </div>
                         <div className="grid space-y-[14px] mt-[30px]">
-                            <a href="/" className="rounded-2xl bg-alerange py-[13px] text-center">
+                            {/* <a href="/" className="rounded-2xl bg-alerange py-[13px] text-center">
                                 <span className="text-base font-semibold">
                                     Start Watching
                                 </span>
-                            </a>
-                            <a href="sign_up.html" className="rounded-2xl border border-white py-[13px] text-center">
+                            </a> */}
+                            <Button type="button" variant="primary" disabled={false}>
+                                <span className="text-base font-semibold">
+                                    Start Watching
+                                </span>
+                            </Button>
+                            {/* <a href="sign_up.html" className="rounded-2xl border border-white py-[13px] text-center">
                                 <span className="text-base text-white">
                                     Create New Account
                                 </span>
-                            </a>
+                            </a> */}
+                            <Link href={route("prototype.register")}>
+                                <Button type="button" variant="light-outline" disabled={false}>
+                                    <span className="text-base font-semibold">
+                                        Create New Account
+                                    </span>
+                                </Button>
+                            </Link>
                             {/* <!-- <button type="submit" className="rounded-2xl bg-alerange py-[13px] text-center">
                                     <span className="text-base font-semibold">
                                         Start Watching
