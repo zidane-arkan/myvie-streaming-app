@@ -81,11 +81,14 @@ function Register() {
                                     Sign Up
                                 </span>
                             </a> */}
-                                <Button variant='primary' type='button'>
-                                    <span className="text-base font-semibold">
-                                        Sign Up
-                                    </span>
-                                </Button>
+                                <Link href={route('prototype.dashboard')}>
+                                    <Button variant='primary' type='button'>
+                                        <span className="text-base font-semibold">
+                                            Sign Up
+                                        </span>
+                                    </Button>
+                                </Link>
+
                                 {/* <a href="sign_in.html" className="rounded-2xl border border-white py-[13px] text-center">
                                 <span className="text-base text-white">
                                     Sign In to My Account
