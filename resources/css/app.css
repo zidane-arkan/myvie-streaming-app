@@ -28,4 +28,25 @@
                 w-full max-w-[570px] focus:outline-none focus:ring-2 transition-all bg-no-repeat bg-center
                 bg-[center_right_20px];
     }
+    
+
+    
+    [type="text"]:focus,
+    input:where(:not([type])):focus,
+    [type="email"]:focus,
+    [type="url"]:focus,
+    [type="password"]:focus,
+    [type="number"]:focus,
+    [type="date"]:focus,
+    [type="datetime-local"]:focus,
+    [type="month"]:focus,
+    [type="search"]:focus,
+    [type="tel"]:focus,
+    [type="time"]:focus,
+    [type="week"]:focus,
+    [multiple]:focus,
+    textarea:focus,
+    select:focus {
+        @apply border-transparent focus:ring-0 focus:ring-offset-0;
+    }
 }

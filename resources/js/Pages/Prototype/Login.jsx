@@ -1,4 +1,6 @@
 import React from "react";
+import InputLabel from "@/Components/InputLabel";
+import Input from "@/Components/Input";
 
 function Login() {
     return (
@@ -22,16 +24,33 @@ function Login() {
                     <form className="w-[370px]">
                         <div className="flex flex-col gap-6">
                             <div>
-                                <label className="block mb-2 text-base">Email Address</label>
-                                <input type="email" name="email"
+                                {/* <label className="block mb-2 text-base">Email Address</label> */}
+                                <InputLabel htmlFor="email">Email Address</InputLabel>
+                                {/* <input type="email" name="email"
                                     className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
-                                    placeholder="Email Address" />
+                                    placeholder="Email Address" /> */}
+                                <Input
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    autoComplete="username"
+                                    placeholder="Email Address"
+                                    isFocused={true}
+                                    required={true}
+                                />
+
                             </div>
                             <div>
-                                <label className="block mb-2 text-base">Password</label>
-                                <input type="password" name="password"
+                                {/* <label className="block mb-2 text-base">Password</label> */}
+                                <InputLabel htmlFor="password">Password</InputLabel>
+                                {/* <input type="password" name="password"
                                     className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
-                                    placeholder="Password" />
+                                    placeholder="Password" /> */}
+                                <Input
+                                    type="password" name="password"
+                                    className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
+                                    placeholder="Password"
+                                />
                             </div>
                         </div>
                         <div className="grid space-y-[14px] mt-[30px]">
