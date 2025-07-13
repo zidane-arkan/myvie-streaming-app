@@ -5,7 +5,7 @@ import Topbar from './Topbar';
 const Authenticated = ({ children }) => {
     return (
         <>
-            <div className="mx-auto max-w-screen hidden lg:block">
+            <div className="hidden mx-auto max-w-screen lg:block">
                 {/* <!-- START: Sidebar --> */}
                 <Sidebar />
                 {/* <!-- END: Sidebar --> */}
@@ -16,7 +16,7 @@ const Authenticated = ({ children }) => {
                         <Topbar />
                         {/* <!-- /Topbar --> */}
                         {/* MAIN CONTENT */}
-                        <main>
+                        <main className='space-y-[50px]'>
                             {children}
                         </main>
                         {/* END MAIN CONTENT */}
@@ -25,8 +25,8 @@ const Authenticated = ({ children }) => {
                 {/* <!-- END: Content --> */}
             </div>
             {/* //  <!-- Desktop Only --> */}
-            <div className="mx-auto px-4 w-full h-screen lg:hidden flex bg-black">
-                <div className="text-white text-2xl text-center leading-snug font-medium my-auto">
+            <div className="flex w-full h-screen px-4 mx-auto bg-black lg:hidden">
+                <div className="my-auto text-2xl font-medium leading-snug text-center text-white">
                     Sorry, this page only supported on 1024px screen or above
                 </div>
             </div>
