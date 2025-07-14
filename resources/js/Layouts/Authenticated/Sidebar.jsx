@@ -1,6 +1,8 @@
 import React from 'react'
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 const Sidebar = () => {
+    const { url, component } = usePage();
+    console.log(url);
     return (
         <aside className="fixed z-50 w-[300px] h-full">
             <div className="flex flex-col p-[30px] pr-0 border-r border-gray-[#F1F1F1] overflow-y-auto h-full">
@@ -11,7 +13,7 @@ const Sidebar = () => {
                     {/* <!-- Menu --> */}
                     <div>
                         <div className="mb-4 text-sm text-gray-1">Menu</div>
-                        <a href="/" className="side-link active">
+                        <Link href={route("prototype.dashboard")} className={component === 'Prototype/Dashboard' ? 'side-link active' : 'side-link'}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g id="Iconly/Bulk/Home">
@@ -22,7 +24,7 @@ const Sidebar = () => {
                                 </g>
                             </svg>
                             Discover
-                        </a>
+                        </Link>
                         <a href="#!" className="side-link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">

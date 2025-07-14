@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-
-
+import { Link } from '@inertiajs/react';
 
 const FeaturedMovie = ({ slug, name = '', category, thumbnail, rating = 1.000, ...props }) => {
     // src="/assets/images/featured-1.png"
@@ -28,7 +27,7 @@ const FeaturedMovie = ({ slug, name = '', category, thumbnail, rating = 1.000, .
                     <img src="/assets/icons/ic_play.svg" width="50" alt="" />
                 </div>
             </div>
-            <a href={slug} className="absolute inset-0 z-50"></a>
+            <Link href={route('prototype.movie.show', slug)} className="absolute inset-0 z-50"></Link>
         </div>
     )
 }
